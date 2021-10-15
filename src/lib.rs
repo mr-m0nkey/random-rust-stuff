@@ -6,6 +6,8 @@ use std::env;
 use std::io::{self, Write};
 use structopt::StructOpt;
 
+
+//NOTE Some code that uses internal mutability and dependency injection
 trait Calculator {
     fn calculate(&self) -> i32;
 }
@@ -85,6 +87,8 @@ impl CalculatorProxy {
     }
 }
 
+
+// NOTE simple command line arguments
 #[derive(Debug, StructOpt)]
 #[structopt(
     name = "Pathfinder",
